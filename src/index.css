@@ -1,0 +1,49 @@
+ * {
+  font-family: 'Rampart One', cursive;
+  background-color: rgb(240, 236, 231);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} 
+
+body {
+  font-size: 100%;
+}
+
+input:focus{
+	outline:0px;
+}
+
+
+/* ----------------- CUENTA ATRáS */
+.timer-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid black;
+  margin: 20px;
+  padding: 10px 30px;
+  width: 400px;
+}
+
+.timer-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.timer-container__numbers {
+  font-size: 40px;
+}
+.planet-express__mainLogo{
+  width: 5rem;
+}
+
+/* ----------------- GRUPO DE CONTADOR + TEXTO*/
+.app__body-countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
