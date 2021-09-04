@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {InputDinamic} from './../InputDinamic/InputDinamic'
 
 // export const FormMain = () => {
 
@@ -37,46 +38,33 @@ import React, {useState} from 'react'
 
 export const FormMain = () => {
 
-        const [inputList, setInputList] = useState ({height:1})
+        const [inputList, setInputList] = useState ([0])
 
         const handleChange = (e) => { setInputList(e.target.value)}
 
+        const fnSubmit = (height, index) => {
+            const newInputList = [...inputList, 0];
+            newInputList[index] = height;
+            setInputList(newInputList);
+        }
 
-            // const {height, value} = e.target.value;
+        const fnRes = (index) => {
+            const newInputList = [...inputList].filter((item, i) =>  index !== i )
+            setInputList(newInputList)
+        }
 
-            // setInputList({
-            //     ...inputList,
-            //     [height]: value
-            // })
-        
-
-        
-        console.log(inputList, null, 2)
 
 
 
     return (
         <>
 
-            <div>
-                    <input 
-                        type="number"
-                        name='height' 
-                        placeholder='Peso de la caja 1'
-                        value={inputList.height}
-                        onChange={handleChange}
-                    />
-                    <input 
-                        type="button" 
-                        value='+'
-                    />
-                    <input 
-                        type="button" 
-                        value='-'
-                    />
+            {inputList.map((item, i) => <InputDinamic fnSubmit={fnSubmit} key={i} index={i} fnRes={fnRes} valor={inputList[i]}/>)}
 
-                
-            </div>
+            
+
+
+
                 {/* <pre>
                     {JSON.stringify(inputList, null, 2)}
                 </pre> */}
