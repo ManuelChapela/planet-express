@@ -17,6 +17,8 @@ export const Newsletter = ({fn}) => {
 
 
 
+
+
     return (
         <div className='footer-newsletter__container'>
             <h1 className='footer-newsletter__title'> ¿Quieres estar al tanto de nuestras novedades y ofertas?</h1>

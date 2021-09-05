@@ -1,20 +1,25 @@
 import React, {useState} from 'react'
 import {InputDinamic} from './../InputDinamic/InputDinamic'
 
-export const FormMain = ({}) => {
+export const FormMain = ({fn}) => {
 
         const [inputList, setInputList] = useState ([0])
 
-        const handleChange = (e) => { setInputList(e.target.value)}
+        // const handleChange = (e) => { setInputList(e.target.value)}
 
         const fnSubmit = (height, index) => {
+            console.log('index', index);
             const newInputList = [...inputList, 0];
             newInputList[index] = height;
             setInputList(newInputList);
-        }
+
+            console.log('IL', inputList);
+         }
+
+
 
         const fnRes = (index) => {
-            const newInputList = [...inputList].filter((item, i) =>  index !== i )
+            const newInputList = [...inputList].filter((_, i) =>  index !== i )
             setInputList(newInputList)
         }
 

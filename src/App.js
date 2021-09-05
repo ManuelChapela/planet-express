@@ -13,19 +13,34 @@ function App() {
 
   const [email, setEmail] = useState('')
   const [ninjas, setNinjas] = useState('')
+  
+  const [height, setHeight] = useState([])
 
  
   const saveEmail = (mail) => { setEmail(mail) }
+  
+  const saveHeight = (kg) => {setHeight(kg)}
+
+  
   
   const reset = () => {
     setEmail('') 
     setNinjas('')
   }
-
-
-
-
+  
+  
   const showNinjas = () => {setNinjas('Has dado clic en saber más')}
+  
+  
+  
+  // console.log(height);
+  console.log(height);
+  // console.log(height.parseInt().reduce((a,b)=> a+b));
+
+  
+
+
+
 
 
   return (
@@ -63,7 +78,7 @@ function App() {
                   <div className='app__body-packages-left'>
                     <p>¿Quieres saber cuantos euritos te vas a dejar en tu envío?</p>
                     <p>Calcúlalos aquí:</p>
-                    <FormMain/>
+                    <FormMain fn={saveHeight}/>
                   </div>
 
                   <div className='app__body-packages-right'>
