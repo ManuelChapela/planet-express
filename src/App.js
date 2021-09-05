@@ -8,44 +8,23 @@ import {Modal} from './components/Modal/Modal'
 import {ModalNinja} from './components/Modal/ModalNinja'
 
 
-
 function App() {
 
   const [email, setEmail] = useState('')
-  const [ninjas, setNinjas] = useState('')
-  
+  const [ninjas, setNinjas] = useState('')  
   const [height, setHeight] = useState([])
 
- 
   const saveEmail = (mail) => { setEmail(mail) }
   
-  // const saveHeight = (kg) => {setHeight(kg)}
   const sumKg = (kg) => {setHeight(kg)}
-
-  console.log('HEIGHT', height);
-
-  
   
   const reset = () => {
     setEmail('') 
     setNinjas('')
   }
-  
-  
+
   const showNinjas = () => setNinjas('Has dado clic en saber más')
-  
-  
-  
-  // console.log(height);
-  console.log(height);
-  // console.log(height.parseInt().reduce((a,b)=> a+b));
-
-  
-
-
-
-
-
+ 
   return (
     <div className="App">
         {email !== ''
@@ -56,14 +35,12 @@ function App() {
               text='Te has registrado correctamente con tu mail:' 
             /> : ''}
       
-          
           { ninjas !== '' ? 
             <ModalNinja 
               className='modal__team'
               fnReset={reset}
               /> : ''}
            
-      
             { ninjas === '' && email === '' ?
 
             <div className='App__header'>
@@ -101,14 +78,7 @@ function App() {
                     
             </div>
             : ''
-        }
-          
-
-
-          
-
-
-         
+        }  
     </div>
   );
 }

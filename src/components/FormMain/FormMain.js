@@ -7,25 +7,15 @@ export const FormMain = ({fn, fn2}) => {
 
         const test = inputList.length > 1 ? inputList.reduce((a,b) => a + b) : 0
 
-        console.log('inputList', test);
-
-        // const handleChange = (e) => { setInputList(e.target.value)}
-
         const fnSubmit = (height, index) => {
-            console.log('index', index);
             const newInputList = [...inputList, 0];
             newInputList[index] = height;
             setInputList(newInputList);
-
         }
+
         const fnSend = () => {
             fn2(test)
         }
-        
-
-
-     
-       
 
     return (
         <>

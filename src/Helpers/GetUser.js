@@ -15,7 +15,7 @@ export const  GetUser =  () => {
         <div>
             <h1 className='modal__text-title'>Este es nuestro fántástico equipo humano</h1>
 
-            <ul>
+            <ul className='modal__margin'>
                 <li>{ users.map(item => { 
                     return ( 
                         <p className='modal__text'>

@@ -2,7 +2,6 @@ import React from 'react'
 
 export const Modal = ({fnReset, text, mail}) => {
 
-
     return (
         <div className='modal__contenido'>
             <div className='modal'>

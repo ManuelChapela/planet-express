@@ -3,7 +3,6 @@ import {GetUser} from './../../Helpers/GetUser'
 
 export const ModalNinja = ({fnReset}) => {
 
-
     return (
         <div>
             <div className='modal__content'>

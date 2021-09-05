@@ -7,7 +7,6 @@ export const InputDinamic = ({fnSubmit, index, valor, disabled}) => {
     const handleChange = (e) => {setValue(Number(e.target.value))}
     const handleSum = () => {fnSubmit(value, index)}
 
-   
     return (
             <div>
                     <input 
@@ -19,6 +18,7 @@ export const InputDinamic = ({fnSubmit, index, valor, disabled}) => {
                         disabled={disabled}
                         onChange={handleChange}
                     />
+                  
                     <input 
                         className='button__dinamic'
                         type="button" 
@@ -26,9 +26,6 @@ export const InputDinamic = ({fnSubmit, index, valor, disabled}) => {
                         disabled={disabled}
                         onClick={handleSum}
                     />
-                    
-
             </div>
-
     )
 }
