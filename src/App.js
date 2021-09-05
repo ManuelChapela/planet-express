@@ -19,7 +19,10 @@ function App() {
  
   const saveEmail = (mail) => { setEmail(mail) }
   
-  const saveHeight = (kg) => {setHeight(kg)}
+  // const saveHeight = (kg) => {setHeight(kg)}
+  const sumKg = (kg) => {setHeight(kg)}
+
+  console.log('HEIGHT', height);
 
   
   
@@ -29,7 +32,7 @@ function App() {
   }
   
   
-  const showNinjas = () => {setNinjas('Has dado clic en saber más')}
+  const showNinjas = () => setNinjas('Has dado clic en saber más')
   
   
   
@@ -56,6 +59,7 @@ function App() {
           
           { ninjas !== '' ? 
             <ModalNinja 
+              className='modal__team'
               fnReset={reset}
               /> : ''}
            
@@ -76,27 +80,25 @@ function App() {
 
                 <div className='app__body-packages'>
                   <div className='app__body-packages-left'>
-                    <p>¿Quieres saber cuantos euritos te vas a dejar en tu envío?</p>
+                    <h2>¿Quieres saber cuantos euritos te vas a dejar en tu envío?</h2>
                     <p>Calcúlalos aquí:</p>
-                    <FormMain fn={saveHeight}/>
+                    <FormMain  fn2={sumKg}/>
                   </div>
 
                   <div className='app__body-packages-right'>
-                    <p>Total de kg:</p>
-                    <p>Precio: </p>
+                    <p>El precio del envío es: {height*2.17.toFixed(2)} € </p>
                   </div>
                 </div>
                    
-                <div className='app__body-newsletter'>
+                <div className='app__newsletter-container'>
+                    <h2>Tenemos un fantástico equipo de Ninjas que trabajan para ti</h2>
+                    <button className='button__app' onClick={showNinjas}>Saber más</button>
+
+                </div>
+                <div className='app__newsletter-component'>
                     <Newsletter fn={saveEmail} />
                 </div>
-
-                <div>
-                    <h1>Tenemos un fantástico equipo de Ninjas que trabajan para ti</h1>
-                    <button onClick={showNinjas}>Saber más</button>
-
                     
-                </div>
             </div>
             : ''
         }

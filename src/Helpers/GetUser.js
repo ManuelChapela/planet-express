@@ -13,21 +13,23 @@ export const  GetUser =  () => {
     return (
         
         <div>
-            <h1>Este es nuestro fántástico equipo humano</h1>
+            <h1 className='modal__text-title'>Este es nuestro fántástico equipo humano</h1>
 
             <ul>
-                <li>{ users.map(item => {
-                    <p>
-                        <br /> 
-                        <img src={item.PicUrl} alt=""/> 
+                <li>{ users.map(item => { 
+                    return ( 
+                        <p className='modal__text'>
+                                <br /> 
+                            <img className='modal__img' src={item.PicUrl} alt=""/> 
                             {`Nombre: ${item.Name}`} 
-                        <br/> 
+                                <br/> 
                             {`Profesión: ${item.Profession}`} 
-                        <br /> 
-                    </p>}
-                    )}
+                                <br /> 
+                        </p>)}
+                )}
                </li>
             </ul>
+
          </div>
     
     )

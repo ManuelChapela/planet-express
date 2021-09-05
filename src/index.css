@@ -38,7 +38,8 @@ input:focus{
 }
 
 .app__body-countdown h2 {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+
 }
 
 .timer-container{
@@ -64,4 +65,179 @@ input:focus{
 }
 
 
+
+
+/* ----------------- PAQUETES PRECIO */
+.app__body-packages{
+  padding: 10px;
+}
+
+.app__body-packages-left h2{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 20px;
+}
+
+.app__body-packages-left p{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  
+}
+
+.input__dinamic{
+width: 200px;
+height: 30px;
+padding: 10px;
+margin: 20px 10px 10px 0px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+border: 1px solid black;
+}
+
+.button__dinamic{
+  height: 30px;
+  width: 100px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  border: 1px solid black;
+
+}
+
+
+
+
+
+
+
+/* -----------------MODAL NEWSLETTER */
+
+
+
+.modal__content{
+ 
+
+}
+
+.modal__content img {
+  width: 80%;
+}
+
+
+
+ .modal__contenido{
+  
+  
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: solid 1px black;
+
+  height: 300px;
+  width: 300px;
+
+
+  padding: 20px;
+
+  font-style: Body 2/Regular/Lato;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0.0015em;
+  text-align: left;
+  
+}
+.modal{
+  background-color: rgb(37, 36, 36);
+  position:fixed;
+  padding: 20px;
+
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;  
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.modal h2{
+  margin: 10px;
+}
+
+.modal button {
+  margin-top: 30px;
+}
+
+.modal__text{
+  background-color: rgb(37, 36, 36);
+  font-size: 20px;
+  color: rgb(240, 236, 231);
+}
+.modal__text-title{
+  background-color: rgb(37, 36, 36);
+  font-size: 32px;
+  color: rgb(240, 236, 231);
+}
+
+.modal__button{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 10px 20px;
+  border: 1px white solid;
+  margin-top: 20px;
+  
+}
+
+/* -----------------MODAL NINJAS */
+
+
+
+/* -----------------EQUIPO DE NINJAS */
+
+
+.app__newsletter-container h2{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 20px;
+}
+
+.button__app{
+  color: rgb(240, 236, 231); ;
+  padding: 10px;
+  background-color: rgb(37, 36, 36);
+  border: solid 1px white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 10px 0px;
+  font-weight: bold;
+  width: 122px;
+}
+
+.app__newsletter-container{
+  padding: 10px;
+}
+
+
+
+
+/* ----------------- FOOTER  */
+.footer-newsletter__container{
+  background-color: black;
+  color: white;
+  padding: 20px 10px;
+}
+
+.footer-newsletter__title{
+  background-color: black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  margin: 10px 0px;
+  
+
+
+}
 

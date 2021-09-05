@@ -1,9 +1,13 @@
 import React, {useState} from 'react'
 import {InputDinamic} from './../InputDinamic/InputDinamic'
 
-export const FormMain = ({fn}) => {
+export const FormMain = ({fn, fn2}) => {
 
         const [inputList, setInputList] = useState ([0])
+
+        const test = inputList.length > 1 ? inputList.reduce((a,b) => a + b) : 0
+
+        console.log('inputList', test);
 
         // const handleChange = (e) => { setInputList(e.target.value)}
 
@@ -13,16 +17,14 @@ export const FormMain = ({fn}) => {
             newInputList[index] = height;
             setInputList(newInputList);
 
-            console.log('IL', inputList);
-         }
-
-
-
-        const fnRes = (index) => {
-            const newInputList = [...inputList].filter((_, i) =>  index !== i )
-            setInputList(newInputList)
         }
+        const fnSend = () => {
+            fn2(test)
+        }
+        
 
+
+     
        
 
     return (
@@ -32,10 +34,10 @@ export const FormMain = ({fn}) => {
                     fnSubmit={fnSubmit} 
                     key={inputList[i]+i} 
                     index={i} 
-                    fnRes={fnRes} 
                     valor={inputList[i]} 
                     disabled={i+1!==inputList.length}
                 />)}
+                <button onClick={fnSend} className='button__app'>Calcular precio</button>
         </>
     )
 }
