@@ -38,8 +38,6 @@ export const Countdown = ({numbers, timeUnit}) => {
         return () => clearInterval(interval.current)
     })
 
-
-
     return (
         <div className='timer-container'>
          

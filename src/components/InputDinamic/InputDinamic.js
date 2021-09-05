@@ -1,17 +1,12 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 
-export const InputDinamic = ({fnSubmit, index, fnRes, valor}) => {
+export const InputDinamic = ({fnSubmit, index, fnRes, valor, disabled}) => {
 
-    const [value, setValue] = useState()
+    const [value, setValue] = useState(valor)
 
     const handleChange = (e) => {setValue(e.target.value)}
     const handleSum = () => {fnSubmit(value, index)}
     const handleRes = () => {fnRes(index)}
-
-    useEffect(() => {
-       setValue(valor)
-    }, [])
-    
 
     return (
             <div>
@@ -20,11 +15,13 @@ export const InputDinamic = ({fnSubmit, index, fnRes, valor}) => {
                         name='height' 
                         placeholder='Peso de la caja 1'
                         value={value === 0 ? '' : value}
+                        disabled={disabled}
                         onChange={handleChange}
                     />
                     <input 
                         type="button" 
                         value='+'
+                        disabled={disabled}
                         onClick={handleSum}
                     />
                     <input 
@@ -33,7 +30,6 @@ export const InputDinamic = ({fnSubmit, index, fnRes, valor}) => {
                         onClick={handleRes}
                     />
 
-                
             </div>
 
     )

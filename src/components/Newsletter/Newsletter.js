@@ -5,7 +5,8 @@ export const Newsletter = ({fn}) => {
 
     const [user, setUser] = useState()
 
-    const handleChange = (e) => {setUser(e.target.value)}
+    const handleChange = (e) => {
+        setUser(e.target.value)}
 
     const handleSubmit = () => {
         fn(user)
@@ -24,7 +25,7 @@ export const Newsletter = ({fn}) => {
             <input 
                 className='footer-newsletter__input' 
                 type="text" 
-                placeholder='tumaravilloso@mail.com'
+                placeholder='wonderful@gmail.com'
                 onChange={handleChange}
                 />
 
